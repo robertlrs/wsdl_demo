@@ -1,6 +1,6 @@
 mvn clean package
 
-export classpath="D:\java\wdsl_test\target\wdsl_test-1.0-SNAPSHOT.jar;$classpath"
+export classpath="D:\java\wdsl_test\wsdl-sdk\target\wsdl-sdk-1.0-SNAPSHOT.jar;$classpath"
 
 echo $classpath;
 

@@ -1,0 +1,5 @@
+com\gemdale\axis\generate\proxy\TestService.class
+com\gemdale\axis\generate\proxy\TestServiceService.class
+com\gemdale\axis\demo\service\TestService.class
+com\gemdale\axis\generate\proxy\TestServiceServiceLocator.class
+com\gemdale\axis\generate\proxy\TestServiceSoapBindingStub.class
