@@ -1,0 +1,7 @@
+com\gemdale\axis\generate\proxy\DemoServiceServiceLocator.class
+com\gemdale\axis\demo\service\DemoService.class
+com\gemdale\axis\generate\proxy\DemoServiceService.class
+com\gemdale\axis\generate\proxy\DemoService.class
+com\gemdale\axis\generate\proxy\DemoServiceSoapBindingStub.class
+com\gemdale\axis\generate\proxy\DemoServiceSoapBindingSkeleton.class
+com\gemdale\axis\generate\proxy\DemoServiceSoapBindingImpl.class
