@@ -1,5 +1,5 @@
 /**
- * DemoServiceServiceLocator.java
+ * TestServiceServiceLocator.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
@@ -7,53 +7,53 @@
 
 package com.gemdale.axis.generate.proxy;
 
-public class DemoServiceServiceLocator extends org.apache.axis.client.Service implements com.gemdale.axis.generate.proxy.DemoServiceService {
+public class TestServiceServiceLocator extends org.apache.axis.client.Service implements com.gemdale.axis.generate.proxy.TestServiceService {
 
-    public DemoServiceServiceLocator() {
+    public TestServiceServiceLocator() {
     }
 
 
-    public DemoServiceServiceLocator(org.apache.axis.EngineConfiguration config) {
+    public TestServiceServiceLocator(org.apache.axis.EngineConfiguration config) {
         super(config);
     }
 
-    public DemoServiceServiceLocator(java.lang.String wsdlLoc, javax.xml.namespace.QName sName) throws javax.xml.rpc.ServiceException {
+    public TestServiceServiceLocator(java.lang.String wsdlLoc, javax.xml.namespace.QName sName) throws javax.xml.rpc.ServiceException {
         super(wsdlLoc, sName);
     }
 
-    // Use to get a proxy class for DemoService
-    private java.lang.String DemoService_address = "http://localhost:8080/axis/services/DemoService";
+    // Use to get a proxy class for TestService
+    private java.lang.String TestService_address = "http://localhost:8080/axis/services/TestService";
 
-    public java.lang.String getDemoServiceAddress() {
-        return DemoService_address;
+    public java.lang.String getTestServiceAddress() {
+        return TestService_address;
     }
 
     // The WSDD service name defaults to the port name.
-    private java.lang.String DemoServiceWSDDServiceName = "DemoService";
+    private java.lang.String TestServiceWSDDServiceName = "TestService";
 
-    public java.lang.String getDemoServiceWSDDServiceName() {
-        return DemoServiceWSDDServiceName;
+    public java.lang.String getTestServiceWSDDServiceName() {
+        return TestServiceWSDDServiceName;
     }
 
-    public void setDemoServiceWSDDServiceName(java.lang.String name) {
-        DemoServiceWSDDServiceName = name;
+    public void setTestServiceWSDDServiceName(java.lang.String name) {
+        TestServiceWSDDServiceName = name;
     }
 
-    public com.gemdale.axis.generate.proxy.DemoService getDemoService() throws javax.xml.rpc.ServiceException {
+    public com.gemdale.axis.generate.proxy.TestService getTestService() throws javax.xml.rpc.ServiceException {
        java.net.URL endpoint;
         try {
-            endpoint = new java.net.URL(DemoService_address);
+            endpoint = new java.net.URL(TestService_address);
         }
         catch (java.net.MalformedURLException e) {
             throw new javax.xml.rpc.ServiceException(e);
         }
-        return getDemoService(endpoint);
+        return getTestService(endpoint);
     }
 
-    public com.gemdale.axis.generate.proxy.DemoService getDemoService(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
+    public com.gemdale.axis.generate.proxy.TestService getTestService(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
         try {
-            com.gemdale.axis.generate.proxy.DemoServiceSoapBindingStub _stub = new com.gemdale.axis.generate.proxy.DemoServiceSoapBindingStub(portAddress, this);
-            _stub.setPortName(getDemoServiceWSDDServiceName());
+            com.gemdale.axis.generate.proxy.TestServiceSoapBindingStub _stub = new com.gemdale.axis.generate.proxy.TestServiceSoapBindingStub(portAddress, this);
+            _stub.setPortName(getTestServiceWSDDServiceName());
             return _stub;
         }
         catch (org.apache.axis.AxisFault e) {
@@ -61,8 +61,8 @@ public class DemoServiceServiceLocator extends org.apache.axis.client.Service im
         }
     }
 
-    public void setDemoServiceEndpointAddress(java.lang.String address) {
-        DemoService_address = address;
+    public void setTestServiceEndpointAddress(java.lang.String address) {
+        TestService_address = address;
     }
 
     /**
@@ -72,9 +72,9 @@ public class DemoServiceServiceLocator extends org.apache.axis.client.Service im
      */
     public java.rmi.Remote getPort(Class serviceEndpointInterface) throws javax.xml.rpc.ServiceException {
         try {
-            if (com.gemdale.axis.generate.proxy.DemoService.class.isAssignableFrom(serviceEndpointInterface)) {
-                com.gemdale.axis.generate.proxy.DemoServiceSoapBindingStub _stub = new com.gemdale.axis.generate.proxy.DemoServiceSoapBindingStub(new java.net.URL(DemoService_address), this);
-                _stub.setPortName(getDemoServiceWSDDServiceName());
+            if (com.gemdale.axis.generate.proxy.TestService.class.isAssignableFrom(serviceEndpointInterface)) {
+                com.gemdale.axis.generate.proxy.TestServiceSoapBindingStub _stub = new com.gemdale.axis.generate.proxy.TestServiceSoapBindingStub(new java.net.URL(TestService_address), this);
+                _stub.setPortName(getTestServiceWSDDServiceName());
                 return _stub;
             }
         }
@@ -94,8 +94,8 @@ public class DemoServiceServiceLocator extends org.apache.axis.client.Service im
             return getPort(serviceEndpointInterface);
         }
         java.lang.String inputPortName = portName.getLocalPart();
-        if ("DemoService".equals(inputPortName)) {
-            return getDemoService();
+        if ("TestService".equals(inputPortName)) {
+            return getTestService();
         }
         else  {
             java.rmi.Remote _stub = getPort(serviceEndpointInterface);
@@ -105,7 +105,7 @@ public class DemoServiceServiceLocator extends org.apache.axis.client.Service im
     }
 
     public javax.xml.namespace.QName getServiceName() {
-        return new javax.xml.namespace.QName("urn:com.gemdale.axis.generate.proxy", "DemoServiceService");
+        return new javax.xml.namespace.QName("urn:com.gemdale.axis.generate.proxy", "TestServiceService");
     }
 
     private java.util.HashSet ports = null;
@@ -113,7 +113,7 @@ public class DemoServiceServiceLocator extends org.apache.axis.client.Service im
     public java.util.Iterator getPorts() {
         if (ports == null) {
             ports = new java.util.HashSet();
-            ports.add(new javax.xml.namespace.QName("urn:com.gemdale.axis.generate.proxy", "DemoService"));
+            ports.add(new javax.xml.namespace.QName("urn:com.gemdale.axis.generate.proxy", "TestService"));
         }
         return ports.iterator();
     }
@@ -123,8 +123,8 @@ public class DemoServiceServiceLocator extends org.apache.axis.client.Service im
     */
     public void setEndpointAddress(java.lang.String portName, java.lang.String address) throws javax.xml.rpc.ServiceException {
         
-if ("DemoService".equals(portName)) {
-            setDemoServiceEndpointAddress(address);
+if ("TestService".equals(portName)) {
+            setTestServiceEndpointAddress(address);
         }
         else 
 { // Unknown Port Name
