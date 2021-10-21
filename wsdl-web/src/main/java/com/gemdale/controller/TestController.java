@@ -10,12 +10,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @org.springframework.stereotype.Controller
-//@RequestMapping("/api")
+@RequestMapping("/api")
 public class TestController implements Controller {
     @Autowired
     TestService testService;
 
-//    @RequestMapping("/hello")
+    @RequestMapping("/hello")
     @Override
     public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
         ModelAndView modelAndView = new ModelAndView();

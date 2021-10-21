@@ -16,6 +16,10 @@
 
 rm -rf ./wsdl-sdk/src/main/java/com/gemdale/axis/generate/proxy
 
+#java org.apache.axis.wsdl.WSDL2Java -o ./wsdl-sdk/src/main/java/ \
+#    -Nurn:com.gemdale.axis.generate.proxy com.gemdale.axis.generate.proxy \
+#    --server-side --skeletonDeploy false  TestService.wsdl
+
 java org.apache.axis.wsdl.WSDL2Java -o ./wsdl-sdk/src/main/java/ \
     -Nurn:com.gemdale.axis.generate.proxy com.gemdale.axis.generate.proxy \
-    --server-side --skeletonDeploy false  TestService.wsdl
+    --server-side --skeletonDeploy true  TestService.wsdl

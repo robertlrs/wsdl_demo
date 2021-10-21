@@ -16,15 +16,10 @@
       <parameter name="wsdlTargetNamespace" value="urn:com.gemdale.axis.generate.proxy"/>
       <parameter name="wsdlServiceElement" value="TestServiceService"/>
       <parameter name="wsdlServicePort" value="TestService"/>
-      <parameter name="className" value="com.gemdale.axis.service.TestServiceSoapBindingImpl"/>
+      <parameter name="className" value="com.gemdale.axis.generate.proxy.TestServiceSoapBindingSkeleton"/>
       <parameter name="wsdlPortType" value="TestService"/>
       <parameter name="typeMappingVersion" value="1.2"/>
-      <operation name="desc" qname="operNS:desc" xmlns:operNS="urn:com.gemdale.axis.generate.proxy" returnQName="descReturn" returnType="rtns:string" xmlns:rtns="http://schemas.xmlsoap.org/soap/encoding/" soapAction="" >
-      </operation>
-      <operation name="setDesc" qname="operNS:setDesc" xmlns:operNS="urn:com.gemdale.axis.generate.proxy" returnQName="setDescReturn" returnType="rtns:string" xmlns:rtns="http://schemas.xmlsoap.org/soap/encoding/" soapAction="" >
-        <parameter qname="in0" type="tns:string" xmlns:tns="http://schemas.xmlsoap.org/soap/encoding/"/>
-      </operation>
-      <parameter name="allowedMethods" value="setDesc desc"/>
+      <parameter name="allowedMethods" value="*"/>
 
   </service>
 </deployment>

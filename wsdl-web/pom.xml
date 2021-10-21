@@ -7,8 +7,6 @@
   <groupId>org.example</groupId>
   <artifactId>wsdl-web</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>war</packaging>
-
 
   <name>wsdl-web Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
@@ -128,7 +126,15 @@
       <version>1.0-SNAPSHOT</version>
       <scope>compile</scope>
     </dependency>
+    <!-- cache -->
+    <dependency>
+      <groupId>com.github.ben-manes.caffeine</groupId>
+      <artifactId>caffeine</artifactId>
+      <version>2.6.0</version>
+    </dependency>
   </dependencies>
+
+  <packaging>war</packaging>
 
   <build>
     <finalName>wsdl-web</finalName>

@@ -12,31 +12,32 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
 		http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache-4.3.xsd">
 
-	<!--配置处理器映射器-->
+	<!--1.配置处理器映射器-->
 	<bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
-	<!--配置处理器适配器-->
-	<bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"></bean>
+	<!--2.配置处理器适配器-->
+<!--	<bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"></bean>-->
 <!--	&lt;!&ndash;配置处理器&ndash;&gt;-->
-	<!--配置视图解析器-->
+	<!--3.配置视图解析器-->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="resolver"/>
-	<bean class="com.gemdale.axis.service.TestServiceImpl" id="testService"></bean>
-	<bean name="/test" class="com.gemdale.controller.TestController">
-		<property name="testService" ref="testService"></property>
-	</bean>
+
+	<aop:aspectj-autoproxy />
+	<task:annotation-driven/>
+	<mvc:annotation-driven></mvc:annotation-driven>
+	<mvc:default-servlet-handler />
+	<context:annotation-config />
+	<context:component-scan base-package="com.gemdale"></context:component-scan>
+
+<!--	<bean class="com.gemdale.axis.service.TestServiceImpl" id="testService"></bean>-->
+<!--	<bean name="/test" class="com.gemdale.controller.TestController">-->
+<!--		<property name="testService" ref="testService"></property>-->
+<!--	</bean>-->
 
 <!--	<bean name="proxy" class="com.gemdale.axis.generate.proxy.TestServiceSoapBindingImpl" id="testServiceSoapBinding">-->
 <!--		<property name="testService" ref="testService"></property>-->
 <!--	</bean>-->
 
-	<bean name="proxy" class="com.gemdale.axis.generate.proxy.TestServiceSoapBindingImpl" id="testServiceSoapBinding">
-	</bean>
+<!--	<bean name="proxy" class="com.gemdale.axis.generate.proxy.TestServiceSoapBindingImpl" id="testServiceSoapBinding">-->
+<!--	</bean>-->
 
-<!--	<aop:aspectj-autoproxy />-->
-<!--	<task:annotation-driven/>-->
-<!--	<mvc:annotation-driven/>-->
-<!--	<mvc:default-servlet-handler />-->
-<!--	<context:annotation-config />-->
-
-<!--	<context:component-scan base-package="com.gemdale" />-->
 
 </beans>

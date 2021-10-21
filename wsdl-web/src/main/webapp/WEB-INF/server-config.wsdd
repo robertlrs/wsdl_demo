@@ -28,6 +28,7 @@
 
   </service>
 
+<!--    手动添加，否则接口：http://localhost:8080/axis/services/TestService?wsdl， 不会生成wsdl-->
     <transport name="http">
         <requestFlow>
             <handler type="java:org.apache.axis.handlers.http.URLMapper"/>

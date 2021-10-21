@@ -4,6 +4,7 @@ package com.gemdale.axis.service;
 import com.gemdale.axis.demo.service.TestService;
 import org.springframework.stereotype.Component;
 
+@Component
 public class TestServiceImpl implements TestService {
     private String desc;
     public java.lang.String desc() {
