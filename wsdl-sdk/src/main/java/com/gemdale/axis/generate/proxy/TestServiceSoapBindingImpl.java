@@ -7,13 +7,13 @@
 
 package com.gemdale.axis.generate.proxy;
 
-public class TestServiceSoapBindingImpl implements com.gemdale.axis.generate.proxy.TestService{
-    public java.lang.String desc() throws java.rmi.RemoteException {
-        return null;
+public class TestServiceSoapBindingImpl implements TestService{
+
+    public String desc() throws java.rmi.RemoteException {
+        return "lksjd";
     }
 
-    public java.lang.String setDesc(java.lang.String in0) throws java.rmi.RemoteException {
-        return null;
+    public String setDesc(String in0) throws java.rmi.RemoteException {
+        return "lskdjklsd";
     }
-
 }

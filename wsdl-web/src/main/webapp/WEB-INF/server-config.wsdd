@@ -1,0 +1,36 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from TestServiceService WSDL service -->
+
+  <service name="TestService" provider="java:RPC" style="rpc" use="encoded">
+      <parameter name="wsdlTargetNamespace" value="urn:com.gemdale.axis.generate.proxy"/>
+      <parameter name="wsdlServiceElement" value="TestServiceService"/>
+      <parameter name="wsdlServicePort" value="TestService"/>
+      <parameter name="className" value="com.gemdale.axis.generate.proxy.TestServiceSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="TestService"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="desc" qname="operNS:desc" xmlns:operNS="urn:com.gemdale.axis.generate.proxy" returnQName="descReturn" returnType="rtns:string" xmlns:rtns="http://schemas.xmlsoap.org/soap/encoding/" soapAction="" >
+      </operation>
+      <operation name="setDesc" qname="operNS:setDesc" xmlns:operNS="urn:com.gemdale.axis.generate.proxy" returnQName="setDescReturn" returnType="rtns:string" xmlns:rtns="http://schemas.xmlsoap.org/soap/encoding/" soapAction="" >
+        <parameter qname="in0" type="tns:string" xmlns:tns="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </operation>
+      <parameter name="allowedMethods" value="setDesc desc"/>
+
+  </service>
+
+    <transport name="http">
+        <requestFlow>
+            <handler type="java:org.apache.axis.handlers.http.URLMapper"/>
+        </requestFlow>
+    </transport>
+</deployment>

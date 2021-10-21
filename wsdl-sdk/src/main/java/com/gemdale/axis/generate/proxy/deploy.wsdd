@@ -16,7 +16,7 @@
       <parameter name="wsdlTargetNamespace" value="urn:com.gemdale.axis.generate.proxy"/>
       <parameter name="wsdlServiceElement" value="TestServiceService"/>
       <parameter name="wsdlServicePort" value="TestService"/>
-      <parameter name="className" value="com.gemdale.axis.generate.proxy.TestServiceSoapBindingImpl"/>
+      <parameter name="className" value="com.gemdale.axis.service.TestServiceSoapBindingImpl"/>
       <parameter name="wsdlPortType" value="TestService"/>
       <parameter name="typeMappingVersion" value="1.2"/>
       <operation name="desc" qname="operNS:desc" xmlns:operNS="urn:com.gemdale.axis.generate.proxy" returnQName="descReturn" returnType="rtns:string" xmlns:rtns="http://schemas.xmlsoap.org/soap/encoding/" soapAction="" >

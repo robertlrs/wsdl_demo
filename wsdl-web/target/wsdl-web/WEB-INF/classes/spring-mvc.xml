@@ -24,6 +24,13 @@
 		<property name="testService" ref="testService"></property>
 	</bean>
 
+<!--	<bean name="proxy" class="com.gemdale.axis.generate.proxy.TestServiceSoapBindingImpl" id="testServiceSoapBinding">-->
+<!--		<property name="testService" ref="testService"></property>-->
+<!--	</bean>-->
+
+	<bean name="proxy" class="com.gemdale.axis.generate.proxy.TestServiceSoapBindingImpl" id="testServiceSoapBinding">
+	</bean>
+
 <!--	<aop:aspectj-autoproxy />-->
 <!--	<task:annotation-driven/>-->
 <!--	<mvc:annotation-driven/>-->
