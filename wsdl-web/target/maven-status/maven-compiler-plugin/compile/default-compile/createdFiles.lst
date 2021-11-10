@@ -1,0 +1,4 @@
+com\gemdale\axis\service\TestServiceImpl.class
+com\gemdale\controller\TestController.class
+com\gemdale\axis\generate\proxy\TestServiceSoapBindingImpl.class
+com\gemdale\SpringContextUtils.class

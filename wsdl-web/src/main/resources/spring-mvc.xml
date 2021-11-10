@@ -14,8 +14,8 @@
 
 	<!--1.配置处理器映射器-->
 	<bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
-	<!--2.配置处理器适配器-->
-<!--	<bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"></bean>-->
+<!--	2.配置处理器适配器-->
+	<bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"></bean>
 <!--	&lt;!&ndash;配置处理器&ndash;&gt;-->
 	<!--3.配置视图解析器-->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="resolver"/>
@@ -28,9 +28,9 @@
 	<context:component-scan base-package="com.gemdale"></context:component-scan>
 
 <!--	<bean class="com.gemdale.axis.service.TestServiceImpl" id="testService"></bean>-->
-<!--	<bean name="/test" class="com.gemdale.controller.TestController">-->
-<!--		<property name="testService" ref="testService"></property>-->
-<!--	</bean>-->
+	<bean name="/test" class="com.gemdale.controller.TestController">
+		<property name="testService" ref="testServiceImpl"></property>
+	</bean>
 
 <!--	<bean name="proxy" class="com.gemdale.axis.generate.proxy.TestServiceSoapBindingImpl" id="testServiceSoapBinding">-->
 <!--		<property name="testService" ref="testService"></property>-->
